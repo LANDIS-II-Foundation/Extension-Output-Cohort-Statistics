@@ -1,0 +1,8 @@
+LandisData  "Max Species Age"
+
+Timestep   5
+
+MapNames   spp-basic-stats/max-age-selected-spp/{species}-{timestep}.gis
+
+Species    abiebals tsugcana tiliamer
+	   
