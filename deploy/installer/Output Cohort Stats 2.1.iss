@@ -12,6 +12,7 @@
 
 #include "package (Setup section) v6.0.iss"
 
+
 [Files]
 ; This .dll IS the extension (ie, the extension's assembly)
 ; NB: Do not put a version number in the file name of this .dll
@@ -30,6 +31,7 @@ Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats
 
 ; User Guides are no longer shipped with installer
 ;Source: docs\LANDIS-II Age Cohort Statistics v2.1 User Guide.pdf; DestDir: {#AppDir}\docs
+
 
 ; LANDIS-II identifies the extension with the info in this .txt file
 ; NB. New releases must modify the name of this file and the info in it
