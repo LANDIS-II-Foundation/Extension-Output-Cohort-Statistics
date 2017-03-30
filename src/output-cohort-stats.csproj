@@ -35,8 +35,8 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-	<Reference Include="Landis.Core">
-		<SpecificVersion>False</SpecificVersion>
+    <Reference Include="Landis.Core">
+      <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
     <Reference Include="Landis.Library.AgeOnlyCohorts">
@@ -47,10 +47,14 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Landis.Library.Metadata, Version=1.0.1.31296, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Landis.Library.Metadata.dll</HintPath>
+    </Reference>
     <Reference Include="Landis.SpatialModeling">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
-    </Reference> 
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +67,7 @@
     <Compile Include="MapNames.cs" />
     <Compile Include="InputParameters.cs" />
     <Compile Include="InputParametersParser.cs" />
+    <Compile Include="MetadataHandler.cs" />
     <Compile Include="PlugIn.cs" />
     <Compile Include="SiteVars.cs" />
     <Compile Include="IntPixel.cs" />

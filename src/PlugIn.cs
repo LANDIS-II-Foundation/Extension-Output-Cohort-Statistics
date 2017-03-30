@@ -63,7 +63,7 @@ namespace Landis.Extension.Output.CohortStats
             ageStatSpecies = parameters.AgeStatSpecies;
             siteAgeStats = parameters.SiteAgeStats;
             siteSppStats = parameters.SiteSppStats;
-
+            MetadataHandler.InitializeMetadata(sppagestats_mapNames, sitesppstats_mapNames, sitesppstats_mapNames, ageStatSpecies, siteAgeStats, siteSppStats);
         }
 
         //---------------------------------------------------------------------
