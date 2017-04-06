@@ -47,9 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Landis.Library.Metadata, Version=1.0.1.31296, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Landis.Library.Metadata">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Landis.Library.Metadata.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Landis.SpatialModeling">
       <SpecificVersion>False</SpecificVersion>
