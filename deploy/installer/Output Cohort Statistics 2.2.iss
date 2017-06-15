@@ -35,7 +35,7 @@ Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats
 
 ; LANDIS-II identifies the extension with the info in this .txt file
 ; NB. New releases must modify the name of this file and the info in it
-#define InfoTxt "Output Cohort Stats 2.1.txt"
+#define InfoTxt "Output Cohort Statistics 2.2.txt"
 Source: {#InfoTxt}; DestDir: {#LandisPlugInDir}
 
 
