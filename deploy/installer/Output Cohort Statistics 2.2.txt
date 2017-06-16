@@ -1,6 +1,6 @@
 LandisData Extension
 
-Name		"internal-to-LANDISII Output Cohort Statistics"
+Name		"Output Cohort Statistics"
 Version		"2.2"
 Type		output
 Assembly	Landis.Extension.Output.CohortStats
