@@ -1,10 +1,10 @@
-Title:			README_OutputCohortStats12.1
+Title:			README_OutputCohortStats2.2
 Project:		LANDIS-II Landscape Change Model
 Project Component:	Extension-Output-Cohort-Statistics
 Component Deposition:	https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics
 Author:			LANDIS-II Foundation
 Origin Date:		26 Mar 2017
-Final Date:		26 Mar 2017
+Final Date:		15 Jun 2017
 
 
 Welcome to the source code repository for Extension-Output-Cohort-Statistics, a LANDIS-II extension. 
