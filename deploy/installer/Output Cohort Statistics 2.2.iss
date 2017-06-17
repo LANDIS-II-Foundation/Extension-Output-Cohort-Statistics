@@ -25,12 +25,9 @@ Source: ..\..\src\bin\debug\Landis.Extension.Output.CohortStats.dll; DestDir: {#
 
 
 ; Complete example for testing the extension
-Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Output Cohort Stats
-Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Output Cohort Stats
-Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats
-
-; User Guides are no longer shipped with installer
-;Source: docs\LANDIS-II Age Cohort Statistics v2.1 User Guide.pdf; DestDir: {#AppDir}\docs
+Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
+Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
+Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
 
 
 ; LANDIS-II identifies the extension with the info in this .txt file
