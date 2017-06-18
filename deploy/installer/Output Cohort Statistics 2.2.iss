@@ -1,6 +1,6 @@
 #define PackageName      "Output Cohort Statistics"
 #define PackageNameLong  "Output Cohort Statistics"
-#define Version          "2.1.2"
+#define Version          "2.2"
 #define ReleaseType      "official"
 #define ReleaseNumber    ""
 #define CoreVersion      "6.0"
@@ -25,17 +25,14 @@ Source: ..\..\src\bin\debug\Landis.Extension.Output.CohortStats.dll; DestDir: {#
 
 
 ; Complete example for testing the extension
-Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Output Cohort Stats
-Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Output Cohort Stats
-Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats
-
-; User Guides are no longer shipped with installer
-;Source: docs\LANDIS-II Age Cohort Statistics v2.1 User Guide.pdf; DestDir: {#AppDir}\docs
+Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
+Source: ..\examples\*.gis; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
+Source: ..\examples\*.bat; DestDir: {#AppDir}\examples\Output Cohort Stats; Flags: replacesameversion
 
 
 ; LANDIS-II identifies the extension with the info in this .txt file
 ; NB. New releases must modify the name of this file and the info in it
-#define InfoTxt "Output Cohort Stats 2.1.txt"
+#define InfoTxt "Output Cohort Statistics 2.2.txt"
 Source: {#InfoTxt}; DestDir: {#LandisPlugInDir}
 
 
