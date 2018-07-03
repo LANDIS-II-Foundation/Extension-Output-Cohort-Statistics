@@ -2,7 +2,7 @@
 //  Authors:  Brendan C. Ward, Robert M. Scheller
 
 
-using Edu.Wisc.Forest.Flel.Util;
+using Landis.Utilities;
 using Landis.Core;
 using System.Collections.Generic;
 

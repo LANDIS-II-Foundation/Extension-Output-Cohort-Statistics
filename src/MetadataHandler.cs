@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using Landis.Library.Metadata;
 using Landis.Core;
-using Edu.Wisc.Forest.Flel.Util;
+using Landis.Utilities;
 using System.IO;
-using Flel = Edu.Wisc.Forest.Flel;
+using Flel = Landis.Utilities;
 
 namespace Landis.Extension.Output.CohortStats
 {
@@ -183,7 +183,7 @@ namespace Landis.Extension.Output.CohortStats
             string dir = Path.GetDirectoryName(path);
             if (!string.IsNullOrEmpty(dir))
             {
-                Flel.Util.Directory.EnsureExists(dir);
+                Flel.Directory.EnsureExists(dir);
             }
 
             //return new StreamWriter(path);
