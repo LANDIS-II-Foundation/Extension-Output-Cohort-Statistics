@@ -1,7 +1,7 @@
 ﻿//  Copyright 2008-2010  Portland State University, Conservation Biology Institute
 //  Authors:  Brendan C. Ward, Robert M. Scheller
 
-using Edu.Wisc.Forest.Flel.Util;
+using Landis.Utilities;
 using Landis.Core;
 using Landis.Library.AgeOnlyCohorts;
 using Landis.SpatialModeling;
