@@ -1,22 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Landis.Extension.Output.CohortStats</RootNamespace>
     <AssemblyName>Landis.Extension.Output.CohortStats-v3</AssemblyName>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyTitle>Landis.Extension.Output.CohortStats-v3</AssemblyTitle>
+    <AssemblyCompany>Landis-II-Foundation</AssemblyCompany>
+    <AssemblyProduct>Landis.Extension.Output.CohortStats-v3</AssemblyProduct>
+    <AssemblyCopyright>Landis-II-Foundation</AssemblyCopyright>
     <AssemblyVersion>3.0</AssemblyVersion>
-    <NeutralLanguage>English</NeutralLanguage>
-    <PackageLicenseUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>LANDIS-II;Landis;Extension;Output cohort statistics</PackageTags>
-    <Copyright>LANDIS-II Foundation</Copyright>
-    <Description>This extension will produce outputs of cohort statistics</Description>
-    <Authors>LANDIS-II Foundation</Authors>
+    <PackageLicenseUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
+    <NeutralLanguage>English</NeutralLanguage>
+    <Authors>Landis-II-Foundation</Authors>
+    <Product>Landis.Extension.Output.CohortStats-v3</Product>
+    <Copyright>Landis-II-Foundation</Copyright>
     <Version>3.0</Version>
-    <FileVersion>7.0</FileVersion>
+    <PackageTags>LANDIS-II;Landis;Extension;Output cohort statistics</PackageTags>
+    <Description>This extension will produce outputs of cohort statistics</Description>
+    <PackageReleaseNotes>.NET Standard 2.0 update.</PackageReleaseNotes>
+    <FileVersion>7.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,6 +40,5 @@
       <HintPath>lib\Landis.Library.Metadata-v2.dll</HintPath>
     </Reference>
   </ItemGroup>
-
  
 </Project>
