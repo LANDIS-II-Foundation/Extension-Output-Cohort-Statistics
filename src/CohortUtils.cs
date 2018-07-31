@@ -1,5 +1,4 @@
-﻿//  Copyright 2008-2010  Portland State University, Conservation Biology Institute
-//  Authors:  Brendan C. Ward, Robert M. Scheller
+﻿//  Authors:  Brendan C. Ward, Robert M. Scheller
 
 using Landis.Utilities;
 using Landis.Core;
