@@ -3,7 +3,7 @@ LandisData Extension
 Name		"Output Cohort Statistics"
 Version		"3.0"
 Type		output
-Assembly	Landis.Extension.Output.CohortStats
+Assembly	Landis.Extension.Output.CohortStats-v3
 Class		Landis.Extension.Output.CohortStats.PlugIn
 Description 	"This extension will produce outputs of cohort statistics"
 CoreVersion  7.0
