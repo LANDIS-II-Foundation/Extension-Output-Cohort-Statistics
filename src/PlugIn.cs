@@ -83,7 +83,7 @@ namespace Landis.Extension.Output.CohortStats
                         species_stat_func = new CohortUtils.SpeciesCohortStatDelegate(CohortUtils.GetMaxAge);
                         break;
                     case "MIN":
-                        species_stat_func = new CohortUtils.SpeciesCohortStatDelegate(CohortUtils.GetMinAge);                     
+                        species_stat_func = new CohortUtils.SpeciesCohortStatDelegate(CohortUtils.GetMinimumAge);                     
                         break;
                     case "MED":
                         species_stat_func = new CohortUtils.SpeciesCohortStatDelegate(CohortUtils.GetMedianAge);

@@ -73,14 +73,14 @@ namespace Landis.Extension.Output.CohortStats
             int min = 32767;//maxof uint
             foreach (ISpeciesCohorts speciesCohorts in SiteVars.Cohorts[site])
             {
-                int minSpeciesAge = GetMinAge(speciesCohorts.Species, site); //Cohorts);
+                int minSpeciesAge = GetMinimumAge(speciesCohorts.Species, site); 
                 if (minSpeciesAge < min)
                     min = minSpeciesAge;
             }
             return min;
         }
         //---------------------------------------------------------------------
-        public static int GetMinAge(ISpecies species, Site site)
+        public static int GetMinimumAge(ISpecies species, Site site)
         {
             if (SiteVars.Cohorts[site] == null)
             {
@@ -89,14 +89,10 @@ namespace Landis.Extension.Output.CohortStats
             }
             int min = 32767;//maxof uint
 
-            foreach (ISpeciesCohorts speciesCohorts in SiteVars.Cohorts[site])
+            foreach (ICohort cohort in SiteVars.Cohorts[site][species])
             {
-                if (speciesCohorts.Species == species)
-                    foreach (ICohort cohort in speciesCohorts)
-                    {
-                        if (cohort.Age < min)
-                            min = (int) cohort.Age;
-                    }
+                if (cohort.Age < min)
+                    min = (int)cohort.Age;
             }
             return min;
         }
