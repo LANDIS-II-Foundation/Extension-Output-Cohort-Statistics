@@ -66,7 +66,7 @@ namespace Landis.Extension.Output.CohortStats
 
         //---------------------------------------------------------------------
 
-        public static int GetMinAge(Site site) 
+        public static int GetMinimumAge(Site site) 
         {
             if (SiteVars.Cohorts[site] == null)
                 return 0;
@@ -87,28 +87,33 @@ namespace Landis.Extension.Output.CohortStats
                 PlugIn.ModelCore.UI.WriteLine("Cohort are null.");
                 return 0;
             }
-            int min = 32767;//maxof uint
+            //PlugIn.ModelCore.UI.WriteLine("   Writing {0} map ...", species.Name);
+            int min = 20000;//maxof uint
 
-            foreach (ICohort cohort in SiteVars.Cohorts[site][species])
+            foreach (ISpeciesCohorts speciesCohorts in SiteVars.Cohorts[site])
             {
-                if (cohort.Age < min)
-                    min = (int)cohort.Age;
+                if (speciesCohorts.Species == species)
+                    foreach (ICohort cohort in speciesCohorts)
+                    {
+                        if (cohort.Age < min)
+                            min = (int)cohort.Age;
+                    }
             }
             return min;
         }
 
-        /*public static uint GetMinAge(ISpeciesCohorts speciesCohorts)
-        {
-            if (speciesCohorts == null)
-                return 0;
-            uint min = 65535;
-            foreach (ICohort cohort in speciesCohorts)
-            {
-                if(cohort.Age<min)
-                    min = cohort.Age;
-            }
-            return min;
-        }*/
+        //public static uint GetMinimumAge(Site site)
+        //{
+        //    if (SiteVars.Cohorts[site] == null)
+        //        return 0;
+        //    uint min = 65535;
+        //    foreach (ICohort cohort in speciesCohorts)
+        //    {
+        //        if (cohort.Age < min)
+        //            min = cohort.Age;
+        //    }
+        //    return min;
+        //}
 
         //---------------------------------------------------------------------
 

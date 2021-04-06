@@ -104,12 +104,12 @@ namespace Landis.Extension.Output.CohortStats
 
                 foreach (ISpecies species in sppAgeStatIter.Value)
                 {
-                    string path = SpeciesMapNames.ReplaceTemplateVars(sppagestats_mapNames, species.Name, sppAgeStatIter.Key, modelCore.CurrentTime);
+                    string path = SpeciesMapNames.ReplaceTemplateVars(sppagestats_mapNames, species.Name, sppAgeStatIter.Key, PlugIn.ModelCore.CurrentTime);
                     ModelCore.UI.WriteLine("   Writing {0} map for {1} to {2} ...", sppAgeStatIter.Key, species.Name, path);
-                    using (IOutputRaster<IntPixel> outputRaster = modelCore.CreateRaster<IntPixel>(path, modelCore.Landscape.Dimensions))
+                    using (IOutputRaster<IntPixel> outputRaster = PlugIn.ModelCore.CreateRaster<IntPixel>(path, PlugIn.ModelCore.Landscape.Dimensions))
                     {
                         IntPixel pixel = outputRaster.BufferPixel;
-                        foreach (Site site in modelCore.Landscape.AllSites)
+                        foreach (Site site in PlugIn.ModelCore.Landscape.AllSites)
                         {
                             if (!site.IsActive) // and has the spp we want
                                 pixel.MapCode.Value = 0;
@@ -135,7 +135,7 @@ namespace Landis.Extension.Output.CohortStats
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMaxAge);
                         break;
                     case "MIN":
-                        site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMinAge);
+                        site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMinimumAge);
                         break;
                     case "MED":
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMedianAge);
@@ -162,12 +162,12 @@ namespace Landis.Extension.Output.CohortStats
                         break;
                 }
 
-                string path = SiteMapNames.ReplaceTemplateVars(siteagestats_mapNames, ageStatIter, modelCore.CurrentTime);
+                string path = SiteMapNames.ReplaceTemplateVars(siteagestats_mapNames, ageStatIter, ModelCore.CurrentTime);
                 ModelCore.UI.WriteLine("   Writing {0} site map to {1} ...", ageStatIter, path);
-                using (IOutputRaster<IntPixel> outputRaster = modelCore.CreateRaster<IntPixel>(path, modelCore.Landscape.Dimensions))
+                using (IOutputRaster<IntPixel> outputRaster = ModelCore.CreateRaster<IntPixel>(path, ModelCore.Landscape.Dimensions))
                 {
                     IntPixel pixel = outputRaster.BufferPixel;
-                    foreach (Site site in modelCore.Landscape.AllSites)
+                    foreach (Site site in ModelCore.Landscape.AllSites)
                     {
                         if (!site.IsActive)
                             pixel.MapCode.Value = 0;
@@ -186,22 +186,20 @@ namespace Landis.Extension.Output.CohortStats
                 switch (sppStatIter)
                 {
                     case "RICH":
-                        //FIXME
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetSppRichness);
                         break;
-                    //add in richness
                     default:
                         System.Console.WriteLine("Unhandled statistic: {0}, using Species Richness Instead", sppStatIter);
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetSppRichness);
                         break;
                 }
 
-                string path = SiteMapNames.ReplaceTemplateVars(sitesppstats_mapNames, sppStatIter, modelCore.CurrentTime);
+                string path = SiteMapNames.ReplaceTemplateVars(sitesppstats_mapNames, sppStatIter, ModelCore.CurrentTime);
                 ModelCore.UI.WriteLine("   Writing {0} site map to {1} ...", sppStatIter, path);
-                using (IOutputRaster<IntPixel> outputRaster = modelCore.CreateRaster<IntPixel>(path, modelCore.Landscape.Dimensions))
+                using (IOutputRaster<IntPixel> outputRaster = ModelCore.CreateRaster<IntPixel>(path, ModelCore.Landscape.Dimensions))
                 {
                     IntPixel pixel = outputRaster.BufferPixel;
-                    foreach (Site site in modelCore.Landscape.AllSites)
+                    foreach (Site site in ModelCore.Landscape.AllSites)
                     {
                         if (!site.IsActive)
                             pixel.MapCode.Value = 0;

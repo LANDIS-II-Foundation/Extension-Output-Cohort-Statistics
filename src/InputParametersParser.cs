@@ -140,7 +140,7 @@ namespace Landis.Extension.Output.CohortStats
 
                                 while (currentLine.Peek() != -1)
                                 {
-                                    word = TextReader.ReadWord(currentLine);
+                                    word = TextReader.ReadWord(currentLine).Trim();
                                     if (word == "all" || word == "All")
                                         throw new InputVariableException(statLineVar, "Line {0}: Cannot use the keyword {1} with a list of species",
                                                                       LineNumber, word);

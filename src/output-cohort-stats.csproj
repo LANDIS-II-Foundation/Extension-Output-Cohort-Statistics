@@ -7,7 +7,9 @@
     <AssemblyCompany>Landis-II-Foundation</AssemblyCompany>
     <AssemblyProduct>Landis.Extension.Output.CohortStats-v3</AssemblyProduct>
     <AssemblyCopyright>Landis-II-Foundation</AssemblyCopyright>
-    <AssemblyVersion>3.0</AssemblyVersion>
+    <AssemblyVersion>3.1</AssemblyVersion>
+    <Version>3.1</Version>
+    <FileVersion>3.1.0.0</FileVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics</RepositoryUrl>
@@ -18,11 +20,9 @@
     <Authors>Landis-II-Foundation</Authors>
     <Product>Landis.Extension.Output.CohortStats-v3</Product>
     <Copyright>Landis-II-Foundation</Copyright>
-    <Version>3.0</Version>
     <PackageTags>LANDIS-II;Landis;Extension;Output cohort statistics</PackageTags>
     <Description>This extension will produce outputs of cohort statistics</Description>
     <PackageReleaseNotes>.NET Standard 2.0 update.</PackageReleaseNotes>
-    <FileVersion>7.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

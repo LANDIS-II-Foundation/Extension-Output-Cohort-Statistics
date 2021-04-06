@@ -101,7 +101,7 @@ namespace Landis.Extension.Output.CohortStats
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMaxAge);
                         break;
                     case "MIN":
-                        site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMinAge);
+                        site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMinimumAge);
                         break;
                     case "MED":
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetMedianAge);
