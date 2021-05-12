@@ -23,7 +23,7 @@ Version 3.1 can be downloaded [here](https://github.com/LANDIS-II-Foundation/Ext
 
 LANDIS-II requires a global parameter file for your scenario, and separate parameter files for each extension.
 
-Example files are [here](https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/testings/version-tests/Core7-CohortStats3.0/output-cohort-statistics-example.zip).
+Example files are [here](https://downgit.github.io/#/home?url=https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/testings/version-tests/Core7-CohortStats3.0).
 
 # Citation
 
