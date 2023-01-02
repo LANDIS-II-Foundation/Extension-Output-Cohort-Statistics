@@ -13,11 +13,11 @@ Timestep   1
 SpeciesAgeStats
 MapNames   outputs/age-per-spp/{species}-{statistic}-{timestep}.img
 
-MIN 		tsugcana  abiebals		 << minimum age for each species
-MAX 		tsugcana  abiebals tiliamer	<< maximum age for each species
-MED		tsugcana			<< median age for each species
-SD		tsugcana			<< standard deviation age for each species
-AVG		tsugcana			<< average age for each species
+MIN 		thujocci  abiebals		 << minimum age for each species
+MAX 		thujocci  abiebals tiliamer	<< maximum age for each species
+MED		thujocci			<< median age for each species
+SD		thujocci			<< standard deviation age for each species
+AVG		thujocci			<< average age for each species
 
 >> ---- STAT2 -----------------------------------------------------
 
