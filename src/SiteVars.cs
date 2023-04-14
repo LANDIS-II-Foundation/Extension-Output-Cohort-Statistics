@@ -9,13 +9,16 @@ namespace Landis.Extension.Output.CohortStats
     public static class SiteVars
     {
         private static ISiteVar<ISiteCohorts> cohorts;
+        private static int siteAgeRichness;
 
         //---------------------------------------------------------------------
 
         public static void Initialize()
         {
             cohorts = PlugIn.ModelCore.GetSiteVar<ISiteCohorts>("Succession.AgeCohorts");
-            
+
+            PlugIn.ModelCore.RegisterSiteVar(siteAgeRichness, "Output.AgeRichness");
+
         }
 
         //---------------------------------------------------------------------
@@ -24,6 +27,14 @@ namespace Landis.Extension.Output.CohortStats
             get
             {
                 return cohorts;
+            }
+        }
+        //---------------------------------------------------------------------
+        public static int SiteAgeRichness
+        {
+            get
+            {
+                return siteAgeRichness;
             }
         }
     }

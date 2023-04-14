@@ -395,6 +395,8 @@ namespace Landis.Extension.Output.CohortStats
                 }
             }
 
+            SiteVars.SiteAgeRichness[site] = age_richness;
+
             return age_richness;
         }
         //---------------------------------------------------------------------
