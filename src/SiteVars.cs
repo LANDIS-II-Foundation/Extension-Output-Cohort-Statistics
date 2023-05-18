@@ -17,9 +17,9 @@ namespace Landis.Extension.Output.CohortStats
         {
             cohorts = PlugIn.ModelCore.GetSiteVar<ISiteCohorts>("Succession.AgeCohorts");
 
-            PlugIn.ModelCore.RegisterSiteVar(siteAgeRichness, "Output.AgeRichness");
-
             siteAgeRichness = PlugIn.ModelCore.Landscape.NewSiteVar<int>();
+
+            PlugIn.ModelCore.RegisterSiteVar(siteAgeRichness, "Output.AgeRichness");
 
         }
 
