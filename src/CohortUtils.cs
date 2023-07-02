@@ -333,15 +333,16 @@ namespace Landis.Extension.Output.CohortStats
         }
 
         //---------------------------------------------------------------------
-        //Use E = Hprime / ln S   where S apparently is # species)    
-        //where Hprime = -sum (pI * ln(pI))   where pI is proportion of individuals found in Ith species
+        // E = Hprime / ln S   where S is # species. In this case, we are using age classes as a substitute for species.
+        // where Hprime = -sum (pI * ln(pI))   where pI is proportion of cohorts found in Ith age category
+        // 
         //from Magurran, A.  1988.  Ecological diversity and its measurements.  Princeton, NJ: Princeton University Press.  Pp 35-37)
         //Return E * 100 to fit within uint range
         public static int GetAgeEvenness(Site site) 
         {
-            double E = 0;
-            double Hprime = 0;
-            double proportion=0;
+            double E = 0.0;
+            double Hprime = 0.0;
+            double proportion=0.0;
             int evenness = 0;
             int total_count = 0;
             Dictionary<int, int> cohort_counts = new Dictionary<int, int>();
@@ -369,7 +370,7 @@ namespace Landis.Extension.Output.CohortStats
                 Hprime += proportion * System.Math.Log(proportion);
             }
             Hprime = - Hprime;
-            E = Hprime / System.Math.Log(cohort_counts.Count);
+            E = Hprime / System.Math.Log((double) cohort_counts.Count);
             evenness = (int)(E * 100.0);
 
             return evenness;
