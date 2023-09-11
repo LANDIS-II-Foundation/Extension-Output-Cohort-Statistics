@@ -364,6 +364,9 @@ namespace Landis.Extension.Output.CohortStats
                 }
             }
 
+            if (total_count == 1)  // if only a single cohort, assume maximum evenness
+                return 100;
+
             foreach (KeyValuePair<int,int> cohortIter in cohort_counts)
             {
                 proportion = (double)cohortIter.Value / (double)total_count;
