@@ -344,7 +344,7 @@ namespace Landis.Extension.Output.CohortStats
             double Hprime = 0.0;
             double proportion=0.0;
             int evenness = 0;
-            int total_count = 0;
+            int cohort_count = 0;
             Dictionary<int, int> cohort_counts = new Dictionary<int, int>();
             if (SiteVars.Cohorts[site] == null)
                 return 0;
@@ -352,7 +352,7 @@ namespace Landis.Extension.Output.CohortStats
             {
                 foreach (ICohort cohort in speciesCohorts)
                 {
-                    total_count++;
+                    cohort_count++;
                     if (!cohort_counts.ContainsKey((int) cohort.Age))
                     {
                         cohort_counts.Add((int) cohort.Age, 1);
@@ -364,12 +364,12 @@ namespace Landis.Extension.Output.CohortStats
                 }
             }
 
-            if (total_count == 1)  // if only a single cohort, assume maximum evenness
+            if (cohort_count == 1)  // if only a single cohort, assume maximum evenness
                 return 100;
 
             foreach (KeyValuePair<int,int> cohortIter in cohort_counts)
             {
-                proportion = (double)cohortIter.Value / (double)total_count;
+                proportion = (double)cohortIter.Value / (double)cohort_count;
                 Hprime += proportion * System.Math.Log(proportion);
             }
             Hprime = - Hprime;
