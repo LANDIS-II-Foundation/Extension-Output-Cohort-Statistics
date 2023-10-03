@@ -5,6 +5,7 @@ using Landis.Core;
 using Landis.Library.AgeOnlyCohorts;
 using Landis.SpatialModeling;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Landis.Extension.Output.CohortStats
 
@@ -340,6 +341,7 @@ namespace Landis.Extension.Output.CohortStats
         //Return E * 100 to fit within uint range
         public static int GetAgeEvenness(Site site) 
         {
+            //PlugIn.ModelCore.UI.WriteLine("   Calculate Evenness");
             double E = 0.0;
             double Hprime = 0.0;
             double proportion=0.0;
@@ -365,17 +367,22 @@ namespace Landis.Extension.Output.CohortStats
             }
 
             if (cohort_count == 1)  // if only a single cohort, assume maximum evenness
-                return 100;
-
-            foreach (KeyValuePair<int,int> cohortIter in cohort_counts)
             {
-                proportion = (double)cohortIter.Value / (double)cohort_count;
-                Hprime += proportion * System.Math.Log(proportion);
+                evenness = 100;
             }
-            Hprime = - Hprime;
-            E = Hprime / System.Math.Log((double) cohort_counts.Count);
-            evenness = (int)(E * 100.0);
+            else
+            {
+                foreach (KeyValuePair<int, int> cohortIter in cohort_counts)
+                {
+                    proportion = (double)cohortIter.Value / (double)cohort_count;
+                    Hprime += proportion * System.Math.Log(proportion);
+                }
+                Hprime = -Hprime;
+                E = Hprime / System.Math.Log((double)cohort_counts.Count);
+                evenness = (int)(E * 100.0);
 
+            }
+            PlugIn.ModelCore.UI.WriteLine("   Evenness = {0}", evenness);
             return evenness;
         }
 

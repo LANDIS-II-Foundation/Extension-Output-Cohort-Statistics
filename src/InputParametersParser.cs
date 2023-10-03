@@ -187,6 +187,7 @@ namespace Landis.Extension.Output.CohortStats
                                                               stat, lineNumber);
                             }
                             statLines[stat] = LineNumber;
+                            //PlugIn.ModelCore.UI.WriteLine("   Age Stat added = {0}", stat);
                             selectedAgeStats.Add(stat);
 
                             GetNextLine();

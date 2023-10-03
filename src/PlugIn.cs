@@ -125,9 +125,11 @@ namespace Landis.Extension.Output.CohortStats
                 }
             }
 
-            //2) Create the output site age stats maps
+            //2) Create the output site stats maps
             foreach(string ageStatIter in siteAgeStats)
             {
+                //PlugIn.ModelCore.UI.WriteLine("   Age Stat = {0}", ageStatIter);
+
                 CohortUtils.SiteCohortStatDelegate site_stat_func;
                 switch (ageStatIter)
                 {

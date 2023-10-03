@@ -21,6 +21,9 @@ namespace Landis.Extension.Output.CohortStats
 
             PlugIn.ModelCore.RegisterSiteVar(siteAgeRichness, "Output.AgeRichness");
 
+            if(SiteVars.Cohorts == null)
+                throw new System.ApplicationException("Site Cohorts NOT Initialized.");
+
         }
 
         //---------------------------------------------------------------------
