@@ -379,10 +379,10 @@ namespace Landis.Extension.Output.CohortStats
                 }
                 Hprime = -Hprime;
                 E = Hprime / System.Math.Log((double)cohort_counts.Count);
-                evenness = (int)(E * 100.0);
+                evenness = (int) System.Math.Max((E * 100.0), 0.0);
 
             }
-            PlugIn.ModelCore.UI.WriteLine("   Evenness = {0}", evenness);
+            //PlugIn.ModelCore.UI.WriteLine("   Evenness = {0}", evenness);
             return evenness;
         }
 
