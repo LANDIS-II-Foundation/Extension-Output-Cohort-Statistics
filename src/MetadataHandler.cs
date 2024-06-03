@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-//using System.Data;
-using System.Text;
 using Landis.Library.Metadata;
 using Landis.Core;
-using Landis.Utilities;
 using System.IO;
-using Flel = Landis.Utilities;
 
 namespace Landis.Extension.Output.CohortStats
 {
@@ -26,7 +21,6 @@ namespace Landis.Extension.Output.CohortStats
             };
 
             Extension = new ExtensionMetadata(PlugIn.ModelCore)
-            //Extension = new ExtensionMetadata()
             {
                 Name = PlugIn.ExtensionName,
                 TimeInterval = PlugIn.ModelCore.CurrentTime,
@@ -36,17 +30,6 @@ namespace Landis.Extension.Output.CohortStats
             //---------------------------------------            
             //          map outputs:         
             //---------------------------------------
-
-            //OutputMetadata mapOut_BiomassRemoved = new OutputMetadata()
-            //{
-            //    Type = OutputType.Map,
-            //    Name = "biomass removed",
-            //    FilePath = @HarvestMapName,
-            //    Map_DataType = MapDataType.Continuous,
-            //    Map_Unit = FieldUnits.Mg_ha,
-            //    Visualize = true,
-            //};
-            //Extension.OutputMetadatas.Add(mapOut_BiomassRemoved);
 
             foreach (KeyValuePair<string, IEnumerable<ISpecies>> sppAgeStatIter in ageStatSpecies)
             {
@@ -71,7 +54,6 @@ namespace Landis.Extension.Output.CohortStats
                         break;
 
                     default:
-                        //this shouldn't ever occur
                         System.Console.WriteLine("Unhandled statistic: {0}, using MaxAge Instead", sppAgeStatIter.Key);
                         species_stat_func = new CohortUtils.SpeciesCohortStatDelegate(CohortUtils.GetMaxAge);
                         break;
@@ -86,7 +68,6 @@ namespace Landis.Extension.Output.CohortStats
                         FilePath = SpeciesMapNames.ReplaceTemplateVars(speciesAgeMap, species.Name, sppAgeStatIter.Key, PlugIn.ModelCore.CurrentTime),
                         Map_DataType = MapDataType.Continuous,
                         Visualize = true,
-                        //Map_Unit = "categorical",
                     };
                     Extension.OutputMetadatas.Add(mapOut_age_stats);
                 }
@@ -146,10 +127,8 @@ namespace Landis.Extension.Output.CohortStats
                 switch (sppStatIter)
                 {
                     case "RICH":
-                        //FIXME
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetSppRichness);
                         break;
-                    //add in richness
                     default:
                         System.Console.WriteLine("Unhandled statistic: {0}, using Species Richness Instead", sppStatIter);
                         site_stat_func = new CohortUtils.SiteCohortStatDelegate(CohortUtils.GetSppRichness);
@@ -163,7 +142,6 @@ namespace Landis.Extension.Output.CohortStats
                     FilePath = SiteMapNames.ReplaceTemplateVars(siteSpeciesMap, sppStatIter, PlugIn.ModelCore.CurrentTime),
                     Map_DataType = MapDataType.Continuous,
                     Visualize = true,
-                    //Map_Unit = "categorical",
                 };
                 Extension.OutputMetadatas.Add(mapOut_site_species_stats);
 
@@ -175,7 +153,6 @@ namespace Landis.Extension.Output.CohortStats
         }
         public static void CreateDirectory(string path)
         {
-            //Require.ArgumentNotNull(path);
             path = path.Trim(null);
             if (path.Length == 0)
                 throw new ArgumentException("path is empty or just whitespace");
@@ -183,10 +160,9 @@ namespace Landis.Extension.Output.CohortStats
             string dir = Path.GetDirectoryName(path);
             if (!string.IsNullOrEmpty(dir))
             {
-                Flel.Directory.EnsureExists(dir);
+                Landis.Utilities.Directory.EnsureExists(dir);
             }
 
-            //return new StreamWriter(path);
             return;
         }
     }

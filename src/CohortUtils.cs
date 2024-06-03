@@ -1,11 +1,9 @@
 ﻿//  Authors:  Brendan C. Ward, Robert M. Scheller
 
-using Landis.Utilities;
 using Landis.Core;
-using Landis.Library.AgeOnlyCohorts;
+using Landis.Library.UniversalCohorts;
 using Landis.SpatialModeling;
 using System.Collections.Generic;
-using System.IO;
 
 namespace Landis.Extension.Output.CohortStats
 
@@ -45,25 +43,12 @@ namespace Landis.Extension.Output.CohortStats
                 if(speciesCohorts.Species == species)
                     foreach (ICohort cohort in speciesCohorts)
                     {
-                        if (cohort.Age > max)
-                            max = (int) cohort.Age;
+                        if (cohort.Data.Age > max)
+                            max = (int) cohort.Data.Age;
                     }
             }
             return max;
         }
-        /*public static uint GetMaxAge(ISpecies species, ActiveSite site) //Cohorts speciesCohorts)
-        {
-            //if (speciesCohorts == null)
-            //    return 0;
-            uint max = 0;
-            foreach (ICohort cohort in speciesCohorts)
-            {
-                //  First cohort is the oldest
-                max = cohort.Age;
-                break;
-            }
-            return max;
-        }*/
 
         //---------------------------------------------------------------------
 
@@ -96,8 +81,8 @@ namespace Landis.Extension.Output.CohortStats
                 if (speciesCohorts.Species == species)
                     foreach (ICohort cohort in speciesCohorts)
                     {
-                        if (cohort.Age < min)
-                            min = (int)cohort.Age;
+                        if (cohort.Data.Age < min)
+                            min = (int)cohort.Data.Age;
                     }
             }
             return min;
@@ -110,8 +95,8 @@ namespace Landis.Extension.Output.CohortStats
         //    uint min = 65535;
         //    foreach (ICohort cohort in speciesCohorts)
         //    {
-        //        if (cohort.Age < min)
-        //            min = cohort.Age;
+        //        if (cohort.Data.Age < min)
+        //            min = cohort.Data.Age;
         //    }
         //    return min;
         //}
@@ -130,7 +115,7 @@ namespace Landis.Extension.Output.CohortStats
             {
                 foreach(ICohort cohort in speciesCohorts)
                 {
-                    cohort_ages.Add((int) cohort.Age);
+                    cohort_ages.Add((int) cohort.Data.Age);
                 }
             }
             int count = cohort_ages.Count;
@@ -171,7 +156,7 @@ namespace Landis.Extension.Output.CohortStats
                 if(speciesCohorts.Species == species)
                     foreach (ICohort cohort in speciesCohorts)
                     {
-                        cohort_ages.Add((int) cohort.Age);
+                        cohort_ages.Add((int) cohort.Data.Age);
                     }
             }
             int count = cohort_ages.Count;
@@ -214,7 +199,7 @@ namespace Landis.Extension.Output.CohortStats
             {
                 foreach (ICohort cohort in speciesCohorts)
                 {
-                    sum += cohort.Age;
+                    sum += cohort.Data.Age;
                     count++;
                 }
             }
@@ -241,7 +226,7 @@ namespace Landis.Extension.Output.CohortStats
                 if(speciesCohorts.Species == species)
                     foreach (ICohort cohort in speciesCohorts)
                     {
-                        sum += cohort.Age;
+                        sum += cohort.Data.Age;
                         count++;
                     }
             }
@@ -268,7 +253,7 @@ namespace Landis.Extension.Output.CohortStats
             {
                 foreach (ICohort cohort in speciesCohorts)
                 {
-                    sum += System.Math.Pow(cohort.Age - avg, 2);
+                    sum += System.Math.Pow(cohort.Data.Age - avg, 2);
                     count++;
                 }
             }
@@ -289,7 +274,7 @@ namespace Landis.Extension.Output.CohortStats
                 if(speciesCohorts.Species == species)
                     foreach (ICohort cohort in speciesCohorts)
                     {
-                        sum += System.Math.Pow(cohort.Age - avg, 2);
+                        sum += System.Math.Pow(cohort.Data.Age - avg, 2);
                         count++;
                     }
             }
@@ -355,13 +340,13 @@ namespace Landis.Extension.Output.CohortStats
                 foreach (ICohort cohort in speciesCohorts)
                 {
                     cohort_count++;
-                    if (!cohort_counts.ContainsKey((int) cohort.Age))
+                    if (!cohort_counts.ContainsKey((int) cohort.Data.Age))
                     {
-                        cohort_counts.Add((int) cohort.Age, 1);
+                        cohort_counts.Add((int) cohort.Data.Age, 1);
                     }
                     else
                     {
-                        cohort_counts[(int) cohort.Age]++;
+                        cohort_counts[(int) cohort.Data.Age]++;
                     }
                 }
             }
@@ -398,9 +383,9 @@ namespace Landis.Extension.Output.CohortStats
             {
                 foreach (ICohort cohort in speciesCohorts)
                 {
-                    if (!ages.Contains(cohort.Age))
+                    if (!ages.Contains(cohort.Data.Age))
                     {
-                        ages.Add(cohort.Age);
+                        ages.Add(cohort.Data.Age);
                         age_richness++;
                     }
                 }

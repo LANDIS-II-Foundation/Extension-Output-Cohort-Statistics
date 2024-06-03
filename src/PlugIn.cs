@@ -1,11 +1,9 @@
 //  Authors:  Brendan C. Ward, Robert M. Scheller
 
-using Landis.Library.AgeOnlyCohorts;
 using Landis.Core;
 using Landis.SpatialModeling;
 
 using System.Collections.Generic;
-using System;
 
 namespace Landis.Extension.Output.CohortStats
 {
@@ -40,6 +38,14 @@ namespace Landis.Extension.Output.CohortStats
                 return modelCore;
             }
         }
+
+        //---------------------------------------------------------------------
+
+        public override void AddCohortData()
+        {
+            return;
+        }
+
         //---------------------------------------------------------------------
 
         public override void LoadParameters(string dataFile, ICore mCore)

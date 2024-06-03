@@ -2,7 +2,6 @@
 
 using Landis.Utilities;
 using Landis.Core;
-using Landis.SpatialModeling;
 using System.Collections.Generic;
 
 namespace Landis.Extension.Output.CohortStats

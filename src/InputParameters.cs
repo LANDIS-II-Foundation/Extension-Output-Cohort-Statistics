@@ -16,12 +16,10 @@ namespace Landis.Extension.Output.CohortStats
 		private string sppagestats_mapNames = "";
         private string siteagestats_mapNames = "";
         private string sitesppstats_mapNames = "";
-        private Dictionary<string, IEnumerable<ISpecies>> ageStatSpecies = new Dictionary<string, IEnumerable<ISpecies>>();
-        private List<string> siteAgeStats = new List<string>();
-        private List<string> siteSppStats = new List<string>();
-		//---------------------------------------------------------------------
 
-		public int Timestep
+        //---------------------------------------------------------------------
+
+        public int Timestep
 		{
 			get {
 				return timestep;
@@ -85,47 +83,17 @@ namespace Landis.Extension.Output.CohortStats
                 sitesppstats_mapNames = value;
             }       
         }
-		//---------------------------------------------------------------------
+        //---------------------------------------------------------------------
 
-        public Dictionary<string, IEnumerable<ISpecies>> AgeStatSpecies
-        {
-            get
-            {
-                return ageStatSpecies;
-            }
-            set
-            {
-                ageStatSpecies = value;
-            }
-        }
+        public Dictionary<string, IEnumerable<ISpecies>> AgeStatSpecies { get; set; } = new Dictionary<string, IEnumerable<ISpecies>>();
 
         //---------------------------------------------------------------------
 
-        public List<string> SiteAgeStats
-        {
-            get
-            {
-                return siteAgeStats;
-            }
-            set
-            {
-                siteAgeStats = value;
-            }
-        }
+        public List<string> SiteAgeStats { get; set; } = new List<string>();
 
-		//---------------------------------------------------------------------
+        //---------------------------------------------------------------------
 
-        public List<string> SiteSppStats
-        {
-            get
-            {
-                return siteSppStats;
-            }
-            set
-            {
-                siteSppStats = value;
-            }
-        }
+        public List<string> SiteSppStats { get; set; } = new List<string>();
 
         //---------------------------------------------------------------------
 
