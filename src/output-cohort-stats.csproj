@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <RootNamespace>Landis.Extension.Output.CohortStats</RootNamespace>
-    <AssemblyName>Landis.Extension.Output.CohortStats-v3</AssemblyName>
-    <AssemblyTitle>Landis.Extension.Output.CohortStats-v3</AssemblyTitle>
+    <AssemblyName>Landis.Extension.Output.CohortStats-v4</AssemblyName>
+    <AssemblyTitle>Landis.Extension.Output.CohortStats-v4</AssemblyTitle>
     <AssemblyCompany>Landis-II-Foundation</AssemblyCompany>
     <AssemblyProduct>Landis.Extension.Output.CohortStats-v3</AssemblyProduct>
     <AssemblyCopyright>Landis-II-Foundation</AssemblyCopyright>
-    <AssemblyVersion>3.0.4</AssemblyVersion>
-    <Version>3.0.4</Version>
-    <FileVersion>3.0.4.0</FileVersion>
+    <AssemblyVersion>4.0.0</AssemblyVersion>
+    <Version>4.0.0</Version>
+    <FileVersion>4.0.0</FileVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics</RepositoryUrl>
@@ -18,7 +18,7 @@
     <PackageProjectUrl>http://www.landis-ii.org</PackageProjectUrl>
     <NeutralLanguage>English</NeutralLanguage>
     <Authors>Landis-II-Foundation</Authors>
-    <Product>Landis.Extension.Output.CohortStats-v3</Product>
+    <Product>Landis.Extension.Output.CohortStats-v4</Product>
     <Copyright>Landis-II-Foundation</Copyright>
     <PackageTags>LANDIS-II;Landis;Extension;Output cohort statistics</PackageTags>
     <Description>This extension will produce outputs of cohort statistics</Description>
@@ -26,15 +26,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Landis.Core" Version="2.0.0" />
+    <PackageReference Include="Landis.Core" Version="3.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
-      <HintPath>lib\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
-    </Reference>
-    <Reference Include="Landis.Library.Cohorts-v2">
-      <HintPath>lib\Landis.Library.Cohorts-v2.dll</HintPath>
+    <Reference Include="Landis.Library.UniversalCohorts-v1">
     </Reference>
     <Reference Include="Landis.Library.Metadata-v2">
       <HintPath>lib\Landis.Library.Metadata-v2.dll</HintPath>

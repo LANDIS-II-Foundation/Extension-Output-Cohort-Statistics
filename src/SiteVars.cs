@@ -1,8 +1,7 @@
 //  Authors:  Brendan C. Ward, Robert M. Scheller
 
-using Landis.Core;
 using Landis.SpatialModeling;
-using Landis.Library.AgeOnlyCohorts;
+using Landis.Library.UniversalCohorts;
 
 namespace Landis.Extension.Output.CohortStats
 {
@@ -15,7 +14,7 @@ namespace Landis.Extension.Output.CohortStats
 
         public static void Initialize()
         {
-            cohorts = PlugIn.ModelCore.GetSiteVar<ISiteCohorts>("Succession.AgeCohorts");
+            cohorts = PlugIn.ModelCore.GetSiteVar<ISiteCohorts>("Succession.UniversalCohorts");
 
             siteAgeRichness = PlugIn.ModelCore.Landscape.NewSiteVar<int>();
 

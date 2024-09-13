@@ -222,3 +222,17 @@ testings/version-tests/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Metadata/Cli
 testings/version-tests/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Metadata/Climate-Library/Climate-Library.xml
 testings/version-tests/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Metadata/Climate-Library/Future-Input-Log_Metadata.xml
 testings/version-tests/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Metadata/Climate-Library/Spinup-Input-Log_Metadata.xml
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Landis-log.txt
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Landis-climate-log.txt
+testings/CoreV8-CohortStats4/Biomass-succession-log.csv
+testings/CoreV8-CohortStats4/Climate-annual-log.csv
+testings/CoreV8-CohortStats4/Climate-future-input-log.csv
+testings/CoreV8-CohortStats4/Climate-spinup-input-log.csv
+testings/CoreV8-CohortStats4/Landis-climate-log.txt
+testings/CoreV8-CohortStats4/Landis-log.txt
+testings/v5.1-1.0/Landis-log.txt
+testings/version-tests/v5.1-1.0/Landis-log.txt
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Biomass-succession-log.csv
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Climate-annual-log.csv
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Climate-future-input-log.csv
+testings/CoreV7.0-CohortStats3.0-BiomassSuccession6.0/Climate-spinup-input-log.csv
