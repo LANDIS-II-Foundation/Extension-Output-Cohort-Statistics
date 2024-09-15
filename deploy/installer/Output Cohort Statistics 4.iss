@@ -6,7 +6,7 @@
 #define AppURL "http://www.landis-ii.org/"
 
 ; Build directory
-#define BuildDir "..\..\src\bin\Release\netstandard2.0"
+#define BuildDir "..\..\src\bin\Debug\netstandard2.0"
 
 ; LANDIS-II installation directories
 #define ExtDir "C:\Program Files\LANDIS-II-v8\extensions"
@@ -50,8 +50,8 @@ Source: {#BuildDir}\Landis.Extension.Output.CohortStats-v4.pdb; DestDir: {#ExtDi
 
 ; Requisite auxiliary libraries
 ; NB. These libraries are used by other extensions and thus are never uninstalled.
-Source: {#BuildDir}\Landis.Library.UniversalCohorts-v1.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
-Source: {#BuildDir}\Landis.Library.Metadata-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+; Source: {#BuildDir}\Landis.Library.UniversalCohorts-v1.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+; Source: {#BuildDir}\Landis.Library.Metadata-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
 
 ; LANDIS-II identifies the extension with the info in this .txt file
 ; NB. New releases must modify the name of this file and the info in it

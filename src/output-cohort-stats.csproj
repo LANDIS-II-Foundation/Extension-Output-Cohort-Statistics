@@ -22,7 +22,7 @@
     <Copyright>Landis-II-Foundation</Copyright>
     <PackageTags>LANDIS-II;Landis;Extension;Output cohort statistics</PackageTags>
     <Description>This extension will produce outputs of cohort statistics</Description>
-    <PackageReleaseNotes>.NET Standard 2.0 update.</PackageReleaseNotes>
+    <PackageReleaseNotes>LANDIS-II v8 update.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
