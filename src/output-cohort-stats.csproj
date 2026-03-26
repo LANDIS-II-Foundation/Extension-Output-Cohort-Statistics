@@ -7,9 +7,9 @@
     <AssemblyCompany>Landis-II-Foundation</AssemblyCompany>
     <AssemblyProduct>Landis.Extension.Output.CohortStats-v3</AssemblyProduct>
     <AssemblyCopyright>Landis-II-Foundation</AssemblyCopyright>
-    <AssemblyVersion>4.0.0</AssemblyVersion>
-    <Version>4.0.0</Version>
-    <FileVersion>4.0.0</FileVersion>
+    <AssemblyVersion>4.1</AssemblyVersion>
+    <Version>4.1</Version>
+    <FileVersion>4.1</FileVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics</RepositoryUrl>
@@ -30,11 +30,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Landis.Library.UniversalCohorts-v1">
-      <HintPath>lib\Landis.Library.UniversalCohorts-v1.dll</HintPath>
-    </Reference>
     <Reference Include="Landis.Library.Metadata-v2">
       <HintPath>lib\Landis.Library.Metadata-v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Landis.Library.UniversalCohorts-v2">
+      <HintPath>..\..\..\..\Documents\GitHub\Extension-NECN-Succession\src\lib\Landis.Library.UniversalCohorts-v2.dll</HintPath>
     </Reference>
   </ItemGroup>
  
