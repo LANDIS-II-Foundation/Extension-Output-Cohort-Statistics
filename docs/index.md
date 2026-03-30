@@ -4,7 +4,7 @@ The Output Cohorts Statistics extension outputs maps of a variety of statistics 
 
 # Release Notes
 
-- Latest official release: Version 4.0 — September 2024
+- Latest official release: Version 4.1 — April 2026
 - [View User Guide](https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/docs/LANDIS-II%20Cohort%20Statistics%20v4%20User%20Guide.pdf).
 - Full release details found in the User Guide and on GitHub.
 - Copyright The LANDIS-II Foundation
@@ -18,7 +18,7 @@ You need:
 
 # Download and Install the Extension
 
-The latest version can be downloaded [here](https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/deploy/installer/LANDIS-II-V8%20Output%20Cohort%20Statistics%204.0-setup.exe). (Look for the download icon in the upper right corner.)  Launch the installer.
+The latest version can be downloaded [here](https://github.com/LANDIS-II-Foundation/Extension-Output-Cohort-Statistics/blob/master/deploy/installer/LANDIS-II-V8%20Output%20Cohort%20Statistics%204.1-setup.exe). (Look for the download icon in the upper right corner.)  Launch the installer.
 
 # Example Files
 
